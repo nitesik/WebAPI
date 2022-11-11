@@ -3,6 +3,6 @@ namespace WebAPI.Services;
 
 public interface IProductService
 {
-	List<Product> GetProducts();
-	Product GetProduct(string id);
+	Task<List<Product>> GetProducts();
+	Task<Product> GetProduct(string id);
 }

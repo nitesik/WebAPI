@@ -21,8 +21,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 			ValidateAudience = true,
 			ValidateLifetime = true,
 			ValidateIssuerSigningKey = true,
-			ValidIssuer = "localhost:7058",
-			ValidAudience = "localhost:7058",
+			ValidIssuer = "localhost:5072",
+			ValidAudience = "localhost:5072",
 			IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(JwtSigningKey))
 		};
 	});
@@ -57,6 +57,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors(AllowedOrigin);
+
+app.UseAuthentication();
 
 app.UseHttpsRedirection();
 

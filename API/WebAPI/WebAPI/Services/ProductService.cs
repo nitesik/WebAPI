@@ -11,14 +11,14 @@ public class ProductService : IProductService
 	{
 		_productRepository = productRepository;
 	}
-	public List<Product> GetProducts()
+	public async Task<List<Product>> GetProducts()
 	{
-		return _productRepository.GetProducts();
+		return await _productRepository.GetProducts();
 	}
 
-	public Product GetProduct(string id)
+	public async Task<Product> GetProduct(string id)
 	{
-		return _productRepository.GetProduct(id);
+		return await _productRepository.GetProduct(id);
 	}
 	
 }

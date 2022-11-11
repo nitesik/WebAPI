@@ -36,8 +36,8 @@ public class AuthenticationService : IAuthenticationService
 			
 			var token = new JwtSecurityToken
 			(
-				issuer: "localhost:7058",
-				audience: "localhost:7058",
+				issuer: "localhost:5072",
+				audience: "localhost:5072",
 				claims: claims,
 				expires: DateTime.Now.AddMinutes(30),
 				signingCredentials: creds

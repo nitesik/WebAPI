@@ -27,7 +27,7 @@ public class ProductsController : ControllerBase
 	[Route("{id}")]
 	public IActionResult GetProduct(string id)
 	{
-		Product product = _productService.GetProduct(id);
+		var product = _productService.GetProduct(id);
 		return Ok(product);
 	}
 }

@@ -4,6 +4,6 @@ namespace WebAPI.Repository;
 
 public interface IProductRepository
 {
-	public List<Product> GetProducts();
-	Product GetProduct(string id);
+	public Task<List<Product>> GetProducts();
+	Task<Product> GetProduct(string id);
 }
